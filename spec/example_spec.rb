@@ -1,16 +1,14 @@
-require 'partido'
-RSpec.describe Partido do
-    before { @partido = Partido.new }
-    it 'debería mostrar "Love - All" si es que nadie anoto' do
-       expect(@partido.obtenerScore()).to eq('Love - All')
+#calcular_precio_final(cantidad_items, precio_unitario, estado)
+require 'precio'
+
+RSpec.describe  do
+    it 'debería mostrar el precio de solo un producto que cuesta 1$ en UT' do
+       expect(calcular_precio_final(1,1,"UT")).to eq(1.06)
     end
 end
-RSpec.describe Partido do
-    before{ 
-        @partido = Partido.new
-        @partido.jugador1Anota() 
-    }
-    it 'debería mostrar "15 - Love" anotando el jugador1' do
-       expect(@partido.obtenerScore()).to eq("15 - Love")
+
+RSpec.describe  do
+    it 'debería mostrar el precio de 1000 productos que cuesta 1$ en UT aplicando su respectivo descuento' do
+       expect(calcular_precio_final(1000,1,"UT")).to eq(1028.2)
     end
 end
