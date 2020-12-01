@@ -12,3 +12,10 @@ RSpec.describe  do
        expect(calcular_precio_final(1000,1,"UT")).to eq(1030)
     end
 end
+
+
+RSpec.describe  do
+    it 'debería mostrar el precio de 3000 productos que cuesta 1$ en UT aplicando su respectivo descuento' do
+       expect(calcular_precio_final(3000,1,"UT")).to eq(3030)
+    end
+end
